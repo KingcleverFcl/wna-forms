@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Form - WnaForms</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-8 flex flex-col items-center">
+    <h1 class="text-3xl mb-6">Create a New Form</h1>
+    <form method="post" class="flex flex-col space-y-4">
+        <input type="number" name="total_questions" placeholder="Total Questions (1-50)" class="p-2 rounded text-black" min="1" max="50" required>
+        <input type="number" name="total_answers" placeholder="Total Answers" class="p-2 rounded text-black" min="1" required>
+        <button type="submit" class="px-4 py-2 bg-green-500 rounded hover:bg-green-600">Create Form</button>
+    </form>
+</body>
+</html>

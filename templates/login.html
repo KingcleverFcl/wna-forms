@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - WnaForms</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen text-white">
+    <h2 class="text-3xl mb-6">Login</h2>
+    <form method="post" class="flex flex-col space-y-4">
+        <input name="login" placeholder="Login" class="p-2 rounded text-black" required>
+        <input type="password" name="password" placeholder="Password" class="p-2 rounded text-black" required>
+        <button type="submit" class="px-4 py-2 bg-blue-500 rounded hover:bg-blue-600">Login</button>
+    </form>
+    <a href="/auth/google" class="mt-6 text-blue-400 hover:underline">Login with Google</a>
+    {% if error %}
+    <p class="text-red-500 mt-4">{{ error }}</p>
+    {% endif %}
+</body>
+</html>

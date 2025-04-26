@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - WnaForms</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-white p-8">
+    <h1 class="text-3xl mb-4">Hello, {{ user.login }}</h1>
+    <p class="mb-4">Forms created: {{ user.total_forms }} | Likes received: {{ user.total_likes }}</p>
+    <a href="/create-form" class="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded">Create New Form</a>
+
+    <h2 class="text-2xl mt-8 mb-4">Your Forms:</h2>
+    {% for form in forms %}
+        <div class="mb-2">
+            <a href="/view-form/{{ form.link_form }}" class="text-blue-400 hover:underline">
+                Form with {{ form.total_questions }} questions and {{ form.total_answers }} answers
+            </a>
+        </div>
+    {% endfor %}
+</body>
+</html>

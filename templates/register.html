@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - WnaForms</title>
+    <link href="/static/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-900 flex flex-col items-center justify-center min-h-screen text-white">
+    <h2 class="text-3xl mb-6">Register</h2>
+    <form method="post" class="flex flex-col space-y-4">
+        <input name="login" placeholder="Login" class="p-2 rounded text-black" required>
+        <input type="password" name="password" placeholder="Password" class="p-2 rounded text-black" required>
+        <button type="submit" class="px-4 py-2 bg-green-500 rounded hover:bg-green-600">Register</button>
+    </form>
+    {% if error %}
+    <p class="text-red-500 mt-4">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
